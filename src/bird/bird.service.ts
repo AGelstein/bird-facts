@@ -1,26 +1,16 @@
 import { Injectable } from '@nestjs/common';
-import { CreateBirdDto } from './dto/create-bird.dto';
-import { UpdateBirdDto } from './dto/update-bird.dto';
+import { Bird } from './entities/bird.entity';
 
 @Injectable()
 export class BirdService {
-  create(createBirdDto: CreateBirdDto) {
-    return 'This action adds a new bird';
+  private readonly birds: Bird[] = [];
+
+  create(bird: Bird) {
+    this.birds.push(bird);
   }
 
-  findAll() {
-    return `This action returns all bird`;
+  findAll(): Bird[] {
+    return this.birds;
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} bird`;
-  }
-
-  update(id: number, updateBirdDto: UpdateBirdDto) {
-    return `This action updates a #${id} bird`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} bird`;
-  }
 }
