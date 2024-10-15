@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -8,6 +8,11 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
-  title = 'project_name';
+export class AppComponent implements OnInit {
+
+  ngOnInit(): void {
+    console.log('wakka wakka wakka')
+  }
+
+  title = 'nest-client';
 }

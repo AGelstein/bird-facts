@@ -1,5 +1,5 @@
 {
-  "name": "project-name",
+  "name": "nest-client",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:project_name": "node dist/project_name/server/server.mjs"
+    "serve:ssr:nest-client": "node dist/nest-client/server/server.mjs"
   },
   "private": true,
   "dependencies": {
