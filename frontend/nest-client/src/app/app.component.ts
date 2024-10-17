@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { UserService } from './api/user.service';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +10,12 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
+  searchNameService = inject(UserService);
 
   ngOnInit(): void {
-    console.log('wakka wakka wakka')
+    this.searchNameService.fetchUsers().subscribe((users) => {
+      console.log(users);
+    })
   }
 
   title = 'nest-client';
