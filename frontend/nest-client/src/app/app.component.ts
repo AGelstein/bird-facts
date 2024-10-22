@@ -7,7 +7,7 @@ import { UserService } from './api/user.service';
   standalone: true,
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent implements OnInit {
   searchNameService = inject(UserService);
@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.searchNameService.fetchUsers().subscribe((users) => {
       console.log(users);
-    })
+    });
   }
 
   title = 'nest-client';
