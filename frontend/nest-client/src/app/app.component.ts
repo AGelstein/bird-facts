@@ -13,9 +13,9 @@ export class AppComponent implements OnInit {
   searchNameService = inject(UserService);
 
   ngOnInit(): void {
-    this.searchNameService.fetchUsers().subscribe((users) => {
-      console.log(users);
-    });
+    // this.searchNameService.fetchUsers().subscribe((users) => {
+    //   console.log(users);
+    // });
   }
 
   title = 'nest-client';
