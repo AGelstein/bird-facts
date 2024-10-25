@@ -1,11 +1,12 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { UserService } from './api/user.service';
+import { UserCardComponent } from "./components/user-card/user-card.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, UserCardComponent, UserCardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

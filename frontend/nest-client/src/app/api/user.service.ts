@@ -10,4 +10,9 @@ export class UserService {
   fetchUsers() {
     return this.httpClient.get('http://localhost:3000/users');
   }
+
+  fetchUserById(id: number) {
+    return this.httpClient.get(`http://localhost:3000/users/${id}`);
+  }
+  
 }
