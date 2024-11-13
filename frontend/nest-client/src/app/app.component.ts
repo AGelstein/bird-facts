@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.searchNameService.getUsers().subscribe({
       next: (users) => {
-        console.log(users);
+        // console.log(users);
       },
       error: (err) => {
         if (err.status === 0) {

@@ -6,18 +6,18 @@ import { UpdateUserDto } from './dto/update-user.dto';
 export class UsersService {
   
   private users = [
-    {
-      id: 1,
-      name: 'John Doe',
-      email: 'john.doe@example.com',
-      role: 'admin',
-    },
-    {
-      id: 2,
-      name: 'Jane Smith',
-      email: 'jane.smith@example.com',
-      role: 'user',
-    },
+  {
+    id: 1,
+    name: 'John Doe',
+    email: 'john.doe@example.com',
+    role: 'admin',
+  },
+  {
+    id: 2,
+    name: 'Jane Smith',
+    email: 'jane.smith@example.com',
+    role: 'user',
+  },
   {
     id: 3,
     name: 'Alice Johnson',
