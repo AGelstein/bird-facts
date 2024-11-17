@@ -1,5 +1,14 @@
-<p-card header="Simple Card">
+<p-card header="User">
     <p class="m-0">
-        Lorem ipsum dolor sit amet...
+        Id: {{this.user()?.id}}
+    </p>
+    <p class="m-0">
+        Name: {{this.user()?.name}}
+    </p>
+    <p class="m-0">
+        Email: {{this.user()?.email}}
+    </p>
+    <p class="m-0">
+        Role: {{this.user()?.role}}
     </p>
 </p-card>

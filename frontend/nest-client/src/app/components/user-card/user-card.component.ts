@@ -1,7 +1,6 @@
-import { Component, inject, OnInit } from '@angular/core';
-import { UserRepository } from '../../repository/user.repository';
-import { UserService } from '../../api/user.service';
+import { Component, input, OnInit } from '@angular/core';
 import { CardModule } from 'primeng/card';
+import { User } from '../../interfaces/User';
 
 @Component({
   selector: 'app-user-card',
@@ -12,14 +11,10 @@ import { CardModule } from 'primeng/card';
 })
 export class UserCardComponent implements OnInit {
 
-  private userRepository = inject(UserRepository)
-  private userService = inject(UserService)
+  user = input<User>()
 
   ngOnInit(): void {
-    this.userService.getUsers().subscribe()
-
-    //todo fix leaky subscription
-    this.userRepository.selectAllUsers().subscribe(users => console.log(users))
+    console.log('user in focus ', this.user())
   }
 
 }
