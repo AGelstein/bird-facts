@@ -1,14 +1,19 @@
-<p-card header="User">
+<p-card header="{{this.user()?.name}}'s Advanced User Card" subheader="User Card Subheader" [style]="{ width: '500px' }">
+    <ng-template pTemplate="header">
+        <img alt="Card" src="https://primefaces.org/cdn/primeng/images/card-ng.jpg" />
+    </ng-template>
     <p class="m-0">
         Id: {{this.user()?.id}}
     </p>
     <p class="m-0">
-        Name: {{this.user()?.name}}
+        Role: {{this.user()?.role}}
     </p>
     <p class="m-0">
         Email: {{this.user()?.email}}
     </p>
-    <p class="m-0">
-        Role: {{this.user()?.role}}
-    </p>
+    <ng-template pTemplate="footer">
+        <div class="flex gap-3 mt-1">
+            <span class="w-full" styleClass="w-full">Lorem ipsum</span>
+        </div>
+    </ng-template>
 </p-card>
